@@ -9,7 +9,7 @@
     </head>
     <body>
         <h1>Tic Tac Toe</h1>
-        <form method="POST" action="index.jsp">
+        <form method="POST" action="entry-servlet">
             <ul>
                 <li><input type="submit" name="user" value="Je commence..." /></li>
                 <li><input type="submit" name="computer" value="L'ordinateur commence" /></li>

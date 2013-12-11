@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author bruno
  */
-@WebServlet(name = "EntryServlet", urlPatterns = {"/EntryServlet"})
+@WebServlet(name = "EntryServlet", urlPatterns = {"/entry-servlet"})
 public class EntryServlet extends HttpServlet {
 
     /**
@@ -43,6 +43,9 @@ public class EntryServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet EntryServlet at " + request.getContextPath() + "</h1>");
+            
+            out.println("<p>" + ((request.getParameter("user")!=null)?"User":"Computer") + "</p>");
+            
             out.println("</body>");
             out.println("</html>");
         } finally {            
