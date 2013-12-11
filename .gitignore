@@ -1,6 +1,13 @@
 *.class
+.DS_Store
+
+# Java #
+*.class
 
 # Package Files #
 *.jar
 *.war
 *.ear
+
+/target/
+*.jsp
