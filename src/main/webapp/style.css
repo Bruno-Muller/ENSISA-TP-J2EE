@@ -1,0 +1,42 @@
+/* 
+    Document   : css
+    Created on : 11 déc. 2013, 15:07:37
+    Author     : bruno
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+h1, p, form {
+    text-align: center;
+}
+
+li {
+    list-style-type:none; 
+}
+
+table
+{
+    margin: auto;
+    border-collapse:collapse;
+} 
+
+td { 
+    border: solid 2px black;
+}
+
+td div {
+    width: 64px; 
+    height: 64px;
+    text-align: center;
+    line-height: 64px;
+    font-size: 40px;
+    font-family: Arial;
+}
+
+.user {
+    color: green;
+}
+
+.computer {
+    color: red;
+}

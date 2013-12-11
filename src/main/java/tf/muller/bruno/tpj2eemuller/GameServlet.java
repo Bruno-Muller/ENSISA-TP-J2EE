@@ -11,14 +11,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import tf.muller.bruno.tpj2eemuller.TicTacToe.Player;
 
 /**
  *
  * @author bruno
  */
-@WebServlet(name = "EntryServlet", urlPatterns = {"/entry-servlet"})
-public class EntryServlet extends HttpServlet {
+@WebServlet(name = "GameServlet", urlPatterns = {"/game-servlet"})
+public class GameServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP
@@ -35,7 +34,9 @@ public class EntryServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-            TicTacToe.getInstance(request).startGame((request.getParameter("user")!=null)?Player.User:Player.Computer);
+            int i = Integer.parseInt(request.getParameter("i"));
+            int j = Integer.parseInt(request.getParameter("j"));
+             TicTacToe.getInstance(request).userPlay(i, j);
             this.getServletContext().getRequestDispatcher("/game.jsp").forward(request, response);
         } finally {            
             out.close();
